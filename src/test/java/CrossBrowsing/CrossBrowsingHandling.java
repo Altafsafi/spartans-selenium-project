@@ -11,11 +11,12 @@ public class CrossBrowsingHandling {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println(" Enter your browser ");
-        scanner.nextLine();
+        System.out.println(" Enter your browser name ");
 
 
-        String browserType = "chrome";
+
+
+        String browserType = scanner.next();
 
         WebDriver driver;
         if(browserType.equals("chrome")){
