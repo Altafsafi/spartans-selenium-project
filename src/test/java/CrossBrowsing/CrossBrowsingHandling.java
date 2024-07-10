@@ -13,9 +13,6 @@ public class CrossBrowsingHandling {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" Enter your browser name ");
 
-
-
-
         String browserType = scanner.next();
 
         WebDriver driver;
