@@ -8,12 +8,9 @@ public class Activity {
 
 
         ChromeDriver chromeDriver = new ChromeDriver();
-
         chromeDriver.get("https://dev.insurance.tekschool-students.com/");
-
-       String title = chromeDriver.getTitle();
+        String title = chromeDriver.getTitle();
         System.out.println(title);
-
         chromeDriver.quit();
 
     }
