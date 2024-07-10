@@ -1,4 +1,5 @@
-import org.checkerframework.checker.units.qual.C;
+package Tek.intro;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Activity {
