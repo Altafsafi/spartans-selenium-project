@@ -14,6 +14,7 @@ public class CrossBrowsingHandling {
         System.out.println(" Enter your browser ");
         scanner.nextLine();
 
+
         String browserType = "chrome";
 
         WebDriver driver;
