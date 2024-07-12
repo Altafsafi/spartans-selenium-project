@@ -25,7 +25,7 @@ public class Activity {
 
         By Email = By.id("emailInput");
         WebElement emailIN = webDriver.findElement(Email);
-        emailIN.sendKeys("lordaltaf@gmail.com");
+        emailIN.sendKeys("safi.mohammad.altaf@gmail.com");
 
         By password = By.id("passwordInput");
         WebElement Password = webDriver.findElement(password);
@@ -39,7 +39,16 @@ public class Activity {
         WebElement Signup = webDriver.findElement(signup);
         Signup.click();
 
+        By profilePic = By.id("profileImage");
+        WebElement ProfilePic = webDriver.findElement(profilePic);
+        if(ProfilePic.isDisplayed()){
+            System.out.println(" test Pass");
+        }else {
+            System.out.println(" test not Pass");
+        }
+
+        }
 
 
     }
-}
+
