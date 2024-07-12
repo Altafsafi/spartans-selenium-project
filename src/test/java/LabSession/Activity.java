@@ -6,10 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Activity {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WebDriver webDriver = new ChromeDriver();
         webDriver.manage().window().maximize();
         webDriver.get("https://retail.tekschool-students.com/");
+
+
+
 
        By getsignIn = By.id("signinLink");
         WebElement signin = webDriver.findElement(getsignIn);
@@ -23,9 +26,13 @@ public class Activity {
         WebElement Writename = webDriver.findElement(WriteName);
         Writename.sendKeys("Altaf");
 
+        String EmailPrefix ="franzkafka";
+        int number = (int) (Math.random() * 100);
+        String randomEmail = EmailPrefix + number +"@gmail.com";
+
         By Email = By.id("emailInput");
         WebElement emailIN = webDriver.findElement(Email);
-        emailIN.sendKeys("safi.mohammad.altaf@gmail.com");
+        emailIN.sendKeys(randomEmail);
 
         By password = By.id("passwordInput");
         WebElement Password = webDriver.findElement(password);
@@ -39,6 +46,8 @@ public class Activity {
         WebElement Signup = webDriver.findElement(signup);
         Signup.click();
 
+        Thread.sleep(1000);
+
         By profilePic = By.id("profileImage");
         WebElement ProfilePic = webDriver.findElement(profilePic);
         if(ProfilePic.isDisplayed()){
@@ -46,6 +55,8 @@ public class Activity {
         }else {
             System.out.println(" test not Pass");
         }
+
+        webDriver.quit();
 
         }
 
