@@ -9,6 +9,8 @@ public class RandomEmail {
         int number = (int) (Math.random() * 100);
         String randomEmail = EmailPrefix + number +"@gmail.com";
 
+        System.out.println(randomEmail);
+
 
     }
 }
