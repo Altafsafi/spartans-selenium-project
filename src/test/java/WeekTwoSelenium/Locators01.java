@@ -1,9 +1,11 @@
-package WeekSelenium;
+package WeekTwoSelenium;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.Random;
 
 public class Locators01 {
     public static void main(String[] args) {
@@ -23,11 +25,14 @@ public class Locators01 {
       WebElement EnterN = webDriver.findElement(enterName);
       EnterN.sendKeys("Mike");
 
-
+        Random random = new Random();
+        int x = random.nextInt(500);
+        String Email1 = "Mikefranz";
+        String RandomEmail = Email1 + x + "@gmail.com";
 
      By enterEmail = By.name("email");
      WebElement Email = webDriver.findElement(enterEmail);
-     Email.sendKeys("lordaltaf3212@gmail.com");
+     Email.sendKeys(RandomEmail);
 
         By Password = By.name("password");
         WebElement Pass = webDriver.findElement(Password);
