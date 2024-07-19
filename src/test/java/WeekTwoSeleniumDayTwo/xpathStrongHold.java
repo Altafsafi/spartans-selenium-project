@@ -15,6 +15,7 @@ public class xpathStrongHold {
         Thread.sleep(1000);
        By locate = By.xpath("//*[@id=\"post-9892\"]/div/div[2]/div/div/a[2]/div");
         WebElement learnMore = webDriver.findElement(locate);
+
         learnMore.click();
     }
 }
