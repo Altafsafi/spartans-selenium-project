@@ -3,6 +3,7 @@ package LabSessionWeek02;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Wait;
 
 import java.time.Duration;
 import java.util.Random;
@@ -26,7 +27,7 @@ public class Activity01 {
         webDriver.findElement(By.className("top-nav__btn")).click();
 
         Random random = new Random();
-        int Random = random.nextInt(200);
+        int Random = random.nextInt();
 
 
 
